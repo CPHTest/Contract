@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Contract.Interface;
 
-namespace Contract.DTO.Tests
+namespace Contract.Test.Tests
 {
     [TestClass()]
     public class BankTests

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Contract.DTO
+namespace Model.DTO
 {
     public class Customer : ICustomer
     {
@@ -21,7 +21,6 @@ namespace Contract.DTO
 
         public void transfer(int amount, IAccount account, ICustomer target)
         {
-            // _Hvad skal den gøre? 
         }
 
         public string getId()

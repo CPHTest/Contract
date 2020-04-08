@@ -13,5 +13,7 @@ namespace Contract.Interface
         IAccount GetAccount(string accountNumber);
         List<IAccount> GetAccounts(string bankCvrNumber);
         List<ICustomer> GetCustomers(string bankCvrNumber);
+        void AddAccount(Account account, Bank bank);
+        void deleteAccount(string accountId);
     }
 }

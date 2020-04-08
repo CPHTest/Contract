@@ -1,22 +1,26 @@
-﻿using Contract.Interface;
+﻿using Contract.DTO;
+using Contract.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Contract.DTO
+namespace Model.DTO
 {
     public class Bank : IBank
     {
         private string cvr;
         private string name;
-        private static List<IAccount> accounts = new List<IAccount>(); 
+        private ICustomer customer;
+        private IAccount account;
+        private static List<IAccount> accounts = new List<IAccount>();
 
         public Bank(string cvr, string name)
         {
             this.cvr = cvr;
             this.name = name;
+
         }
 
         public List<IAccount> GetAccounts(Contract.DTO.Customer customer)

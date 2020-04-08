@@ -9,11 +9,11 @@ namespace Contract.Interface
 {
     public interface IBank
     {
-        public List<IAccount> GetAccounts();
-
-        public void AddAccount(IAccount account);
+        public List<IAccount> GetAccounts(Customer customer);
 
         public IAccount GetAccount(string id);
+
+        public void AddAccount(IAccount account);
     }
 }
 

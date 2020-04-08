@@ -12,21 +12,15 @@ namespace Contract.Interface
         public string Number { get; set; }
         public long Balance { get; set; }
 
-        IBank getBank();
-
-        ICustomer getCustomer();
-
-        string getNumber();
-
         long getBalance();
 
         void Transfer(long amount, IAccount target);
 
         void Transfer(long amount, string targetNumber);
 
-        void Deposit(IAccount target, long amount);
+        //void Deposit(IAccount target, long amount);
 
-        void Withdrawal(long amount, IAccount target);
+        //void Withdrawal(long amount, IAccount target);
 
     }
 }

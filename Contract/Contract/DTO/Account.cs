@@ -9,42 +9,25 @@ namespace Contract.DTO
 {
     public class Account : IAccount
     {
-        private IBank bank;
-        private ICustomer customer;
+
         private string number;
         private long balance = 0;
-
+        private Bank bank;
 
         public string Number { get { return number; } set { number = value; } }
         public long Balance { get { return balance; } set { balance = value; } }
 
 
-        public Account(IBank bank, ICustomer customer, string number)
+        public Account(string number)
         {
-            this.bank = bank;
-            this.customer = customer;
             this.number = number;
-        }
-
-        public IBank getBank()
-        {
-            return bank;
-        }
-
-        public ICustomer getCustomer()
-        {
-            return customer;
-        }
-
-        public string getNumber()
-        {
-            return number;
         }
 
         public long getBalance()
         {
             return balance;
         }
+       
 
         public void Transfer(long amount, IAccount target)
         {
@@ -52,6 +35,7 @@ namespace Contract.DTO
             {
                 throw new ArgumentException("Amount is negative");
             }
+            Balance -= amount;
             target.Balance += amount;
         }
 
@@ -65,14 +49,14 @@ namespace Contract.DTO
             Transfer(amount, target);
         }
 
-        public void Deposit(IAccount target, long amount)
-        {
-            target.Balance += amount;
-        }
+        //public void Deposit(IAccount target, long amount)
+        //{
+        //    target.Balance += amount;
+        //}
 
-        public void Withdrawal(long amount, IAccount target)
-        {
-            target.Balance -= amount;
-        }
+        //public void Withdrawal(long amount, IAccount target)
+        //{
+        //    target.Balance -= amount;
+        //}
     }
 }

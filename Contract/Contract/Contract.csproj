@@ -45,6 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Backend\API.cs" />
+    <Compile Include="Backend\Model\Account.cs" />
+    <Compile Include="Backend\Model\Bank.cs" />
+    <Compile Include="Backend\Model\Customer.cs" />
+    <Compile Include="DatabaseScript\DummyDatabase.cs" />
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\Bank.cs" />
     <Compile Include="DTO\Customer.cs" />

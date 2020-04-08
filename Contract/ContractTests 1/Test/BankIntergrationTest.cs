@@ -15,11 +15,11 @@ namespace Contract.Test.Tests
     {
         // Fields are used by all tests.
         private static IBank bank = new Bank("1203954", "Jyske Bank");
-        private static ICustomer customerJonas = new Customer("2206921111", "Jonas pedersen", "1");
+        private static ICustomer customerJonas = new DTO.Customer("2206921111", "Jonas pedersen", "1");
         private static ICustomer customerChristoffer = new Customer("2206921111", "Christoffer dunk", "2");
 
-        private static IAccount JonasAccount = new Account(bank, customerJonas, "1");
-        private static IAccount ChristofferAccount = new Account(bank, customerChristoffer, "2");
+        private static IAccount JonasAccount = new Account("1");
+        private static IAccount ChristofferAccount = new Account( "2");
 
 
         //Setup will just add accounts to the bank, which is also used in all the tests
@@ -39,7 +39,7 @@ namespace Contract.Test.Tests
 
 
             //Act
-            List<IAccount> accountA = bank.GetAccounts();
+            List<IAccount> accountA = bank.GetAccounts(customerJonas);
 
             //Assert
             Assert.AreEqual(8, accountA.Count);
@@ -55,10 +55,10 @@ namespace Contract.Test.Tests
 
 
             //Act
-            IAccount accountA = bank.GetAccount(JonasAccount.getNumber());
+            IAccount accountA = bank.GetAccount(JonasAccount.Number);
 
             //Assert
-            Assert.AreEqual(JonasAccount.getNumber(), accountA.getNumber());
+            Assert.AreEqual(JonasAccount.Number, accountA.Number);
         }
 
         [TestMethod()]

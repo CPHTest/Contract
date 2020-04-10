@@ -30,3 +30,6 @@ C:\Users\Jonas\Documents\GitHub\Contract\Contract\ContractTests 1\obj\Debug\Cont
 C:\Users\Jonas\Documents\GitHub\Contract\Contract\ContractTests 1\obj\Debug\ContractTests 1.csproj.CopyComplete
 C:\Users\Jonas\Documents\GitHub\Contract\Contract\ContractTests 1\obj\Debug\ContractTests 1.dll
 C:\Users\Jonas\Documents\GitHub\Contract\Contract\ContractTests 1\obj\Debug\ContractTests 1.pdb
+C:\Users\Jonas\source\repos\Contract\Contract\ContractTests 1\obj\Debug\ContractTests 1.csprojAssemblyReference.cache
+C:\Users\Jonas\source\repos\Contract\Contract\ContractTests 1\obj\Debug\ContractTests 1.dll
+C:\Users\Jonas\source\repos\Contract\Contract\ContractTests 1\obj\Debug\ContractTests 1.pdb

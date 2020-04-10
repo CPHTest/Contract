@@ -14,21 +14,20 @@ namespace Contract.DTO
         private long balance = 0;
         private Bank bank;
 
-        public string Number { get { return number; } set { number = value; } }
-        public long Balance { get { return balance; } set { balance = value; } }
-
-
         public Account(string number)
         {
             this.number = number;
         }
+
+        public string Number { get { return number; } set { number = value; } }
+        public long Balance { get { return balance; } set { balance = value; } }
+
 
         public long getBalance()
         {
             return balance;
         }
        
-
         public void Transfer(long amount, IAccount target)
         {
             if (amount < 0)

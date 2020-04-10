@@ -53,10 +53,12 @@
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\Bank.cs" />
     <Compile Include="DTO\Customer.cs" />
+    <Compile Include="DTO\Movement.cs" />
     <Compile Include="Interface\IAPI.cs" />
     <Compile Include="Interface\IAccount.cs" />
     <Compile Include="Interface\IBank.cs" />
     <Compile Include="Interface\ICustomer.cs" />
+    <Compile Include="Interface\IMovement.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -10,3 +10,9 @@ C:\Users\Jonas\Documents\GitHub\Contract\Contract\Contract\bin\Debug\Contract.pd
 C:\Users\Jonas\Documents\GitHub\Contract\Contract\Contract\obj\Debug\Contract.csprojAssemblyReference.cache
 C:\Users\Jonas\Documents\GitHub\Contract\Contract\Contract\obj\Debug\Contract.exe
 C:\Users\Jonas\Documents\GitHub\Contract\Contract\Contract\obj\Debug\Contract.pdb
+C:\Users\Jonas\source\repos\Contract\Contract\Contract\bin\Debug\Contract.exe.config
+C:\Users\Jonas\source\repos\Contract\Contract\Contract\bin\Debug\Contract.exe
+C:\Users\Jonas\source\repos\Contract\Contract\Contract\bin\Debug\Contract.pdb
+C:\Users\Jonas\source\repos\Contract\Contract\Contract\obj\Debug\Contract.csprojAssemblyReference.cache
+C:\Users\Jonas\source\repos\Contract\Contract\Contract\obj\Debug\Contract.exe
+C:\Users\Jonas\source\repos\Contract\Contract\Contract\obj\Debug\Contract.pdb

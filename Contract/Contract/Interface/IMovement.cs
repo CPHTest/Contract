@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Contract.Interface
 {
-    class IMovement
+    public class IMovement
     {
     }
 }

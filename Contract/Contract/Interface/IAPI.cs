@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Contract.Interface
 {
-    interface IAPI
+    public interface IAPI
     {
         Bank GetBank(string cvr);
         IAccount GetAccount(string accountNumber);

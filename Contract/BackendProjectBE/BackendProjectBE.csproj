@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7041DF6F-8222-4003-873E-3D7CFE944526}</ProjectGuid>
+    <ProjectGuid>{CF4C1F4C-9BCA-4A53-B674-56C05F760165}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BackendProject</RootNamespace>
-    <AssemblyName>BackendProject</AssemblyName>
+    <RootNamespace>BackendProjectBE</RootNamespace>
+    <AssemblyName>BackendProjectBE</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,8 +48,8 @@
     <Compile Include="Backend\Model\Account.cs" />
     <Compile Include="Backend\Model\Bank.cs" />
     <Compile Include="Backend\Model\Customer.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

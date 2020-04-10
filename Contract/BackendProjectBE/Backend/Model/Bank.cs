@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Contract.DTO
+namespace BackendProject.Model
 {
-    public class Bank : IBank
+    public class Bank 
     {
         private string cvr;
         private string name;
-        private static List<IAccount> accounts = new List<IAccount>(); 
+        private static List<IAccount> accounts = new List<IAccount>();
 
         public Bank(string cvr, string name)
         {
@@ -19,7 +19,7 @@ namespace Contract.DTO
             this.name = name;
         }
 
-        public List<IAccount> GetAccounts(ICustomer customer)
+        public List<IAccount> GetAccounts(Contract.DTO.Customer customer)
         {
             return accounts;
         }

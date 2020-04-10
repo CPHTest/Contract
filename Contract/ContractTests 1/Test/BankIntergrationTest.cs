@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Contract.Interface;
-using Contract.DTO;
 
 namespace Contract.Test.Tests
 {
@@ -15,7 +14,7 @@ namespace Contract.Test.Tests
     {
         // Fields are used by all tests.
         private static IBank bank = new Bank("1203954", "Jyske Bank");
-        private static ICustomer customerJonas = new DTO.Customer("2206921111", "Jonas pedersen", "1");
+        private static ICustomer customerJonas = new Customer("2206921111", "Jonas pedersen", "1");
         private static ICustomer customerChristoffer = new Customer("2206921111", "Christoffer dunk", "2");
 
         private static IAccount JonasAccount = new Account("1");

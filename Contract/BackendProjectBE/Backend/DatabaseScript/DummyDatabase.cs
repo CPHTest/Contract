@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BackendProject.DatabaseScript
+namespace BackendProjectBE.DatabaseScript
 {
     public class DummyDatabase
     {

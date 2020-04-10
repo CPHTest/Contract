@@ -1,5 +1,4 @@
-﻿using Contract.DTO;
-using Contract.Interface;
+﻿using Contract.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +11,8 @@ namespace BackendProjectBE.Model
     {
         private string number;
         private long balance = 0;
-        private Bank bank;
+        private IBank bank;
+        private ICustomer customer;
 
         public string Number { get { return number; } set { number = value; } }
         public long Balance { get { return balance; } set { balance = value; } }

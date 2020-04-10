@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BackendProjectBE.DatabaseScript;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,12 @@ namespace BackendProjectBE
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("gasgasga");
+            Console.WriteLine("Creating database tabels and inserting data");
+            DummyDatabase dummyDatabase = new DummyDatabase();
+            dummyDatabase.GetDatabases();
+            Console.WriteLine("Completed");
+            Console.ReadLine();
+
         }
     }
 }

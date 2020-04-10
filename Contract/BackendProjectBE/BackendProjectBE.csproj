@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Backend\API.cs" />
     <Compile Include="Backend\DatabaseScript\DummyDatabase.cs" />
     <Compile Include="Backend\Model\Account.cs" />
     <Compile Include="Backend\Model\Bank.cs" />

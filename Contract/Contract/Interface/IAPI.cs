@@ -9,11 +9,11 @@ namespace Contract.Interface
 {
     public interface IAPI
     {
-        Bank GetBank(string cvr);
+       IBank GetBank(string cvr);
         IAccount GetAccount(string accountNumber);
         List<IAccount> GetAccounts(string bankCvrNumber);
         List<ICustomer> GetCustomers(string bankCvrNumber);
-        void AddAccount(Account account, Bank bank);
+        void AddAccount(IAccount account, IBank bank);
         void deleteAccount(string accountId);
     }
 }

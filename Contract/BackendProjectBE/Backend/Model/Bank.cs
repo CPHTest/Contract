@@ -19,7 +19,7 @@ namespace BackendProject.Model
             this.name = name;
         }
 
-        public List<IAccount> GetAccounts(Contract.DTO.Customer customer)
+        public List<IAccount> GetAccounts(ICustomer customer)
         {
             return accounts;
         }

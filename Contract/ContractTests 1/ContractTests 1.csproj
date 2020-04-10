@@ -56,6 +56,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Test\DatabaseTest.cs" />
     <Compile Include="Test\BankTest.cs" />
     <Compile Include="Test\BankIntergrationTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -64,6 +65,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BackendProjectBE\BackendProjectBE.csproj">
+      <Project>{CF4C1F4C-9BCA-4A53-B674-56C05F760165}</Project>
+      <Name>BackendProjectBE</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Contract\Contract.csproj">
       <Project>{4F492D32-73AB-4386-85A2-316A86159CF4}</Project>
       <Name>Contract</Name>

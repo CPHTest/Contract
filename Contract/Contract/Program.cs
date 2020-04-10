@@ -10,8 +10,7 @@ namespace Contract
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("124312312");
-            Console.ReadLine();
+            
         }
     }
 }

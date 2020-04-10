@@ -12,6 +12,7 @@ namespace BackendProject.Model
         private string cpr;
         private string name;
         private string id;
+        private IBank bank;
 
         public Customer(string cpr, string name, string id)
         {

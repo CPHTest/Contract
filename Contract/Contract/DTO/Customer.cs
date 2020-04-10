@@ -21,7 +21,7 @@ namespace Contract.DTO
 
         public void transfer(int amount, IAccount account, ICustomer target)
         {
-            // _Hvad skal den gøre? 
+            // _Hvad skal den gøre?_
         }
 
         public string getId()

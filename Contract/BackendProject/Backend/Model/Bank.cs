@@ -1,12 +1,11 @@
-﻿using Contract.DTO;
-using Contract.Interface;
+﻿using Contract.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Backend.Model
+namespace BackendProject.Model
 {
     public class Bank 
     {

@@ -11,7 +11,7 @@ namespace Contract.DTO
     {
         private string cvr;
         private string name;
-        private static List<IAccount> accounts = new List<IAccount>(); 
+        private static List<IAccount> accounts = new List<IAccount>();  //storage
 
         public Bank(string cvr, string name)
         {

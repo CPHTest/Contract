@@ -9,12 +9,12 @@ namespace Contract.DTO
 {
     public class Account : IAccount
     {
-
-        private string number;
+        private IBank bank;
+        private ICustomer customer;
+        private String number;
         private long balance = 0;
-        private Bank bank;
 
-        public Account(string number)
+        public Account(IBank bank, ICustomer customer, string number)
         {
             this.number = number;
         }

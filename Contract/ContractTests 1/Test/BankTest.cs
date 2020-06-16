@@ -12,6 +12,9 @@ namespace Contract.Test.Tests
     [TestClass()]
     public class BankTests
     {
+        // Unit Test
+
+
         // Naming convention used in the project:
         // [the name of the tested method]_[expected input / tested state]_[expected behavior].
         // Mock objects:  Mock<Customer> customerJonas = new Mock<Customer>();
@@ -23,10 +26,10 @@ namespace Contract.Test.Tests
         {
 
             //Arrange
-            Customer customerJonas = new Customer("2206921111", "Jonas pedersen", "1");
-            Customer customerChristoffer = new Customer("2206921111", "Christoffer dunk", "2");
-            Account JonasAccount = new Account("1");
-            Account ChristofferAccount = new Account("2");
+            ICustomer customerJonas = new Customer("2206921111", "Jonas pedersen", "1");
+            ICustomer customerChristoffer = new Customer("2206921111", "Christoffer dunk", "2");
+            IAccount JonasAccount = new Account(bank, customerJonas, "1");
+            IAccount ChristofferAccount = new Account(bank, customerChristoffer, "2");
             int TransferAmount = 500;
             double ChristofferStatingBalance = ChristofferAccount.getBalance();
 
@@ -44,8 +47,8 @@ namespace Contract.Test.Tests
             //Arrange
             Customer customerJonas = new Customer("2206921111", "Jonas pedersen", "1");
             Customer customerChristoffer = new Customer("2206921111", "Christoffer dunk", "2");
-            Account JonasAccount = new Account("1");
-            Account ChristofferAccount = new Account("2");
+            IAccount JonasAccount = new Account(bank, customerJonas, "1");
+            IAccount ChristofferAccount = new Account(bank, customerChristoffer, "2");
             int TransferAmount = 500;
             double ChristofferStatingBalance = ChristofferAccount.getBalance();
 
@@ -64,8 +67,8 @@ namespace Contract.Test.Tests
             //Arrange 
             Customer customerJonas = new Customer("2206921111", "Jonas pedersen", "1");
             Customer customerChristoffer = new Customer("2206921111", "Christoffer dunk", "2");
-            Account JonasAccount = new Account("1");
-            Account ChristofferAccount = new Account("2");
+            IAccount JonasAccount = new Account(bank, customerJonas, "1");
+            IAccount ChristofferAccount = new Account(bank, customerChristoffer, "2");
 
             int TransferAmount = -500;
             double ChristofferStatingBalance = ChristofferAccount.getBalance();
@@ -86,8 +89,8 @@ namespace Contract.Test.Tests
         {
             //Arrange
             Customer customerJonas = new Customer("2206921111", "Jonas pedersen", "1");
-            Account JonasAccount = new Account("1");
-            int TransferAmount = 0;
+            IAccount JonasAccount = new Account(bank, customerJonas, "1");
+            //int TransferAmount = 0;
 
             //Act
 
@@ -100,7 +103,7 @@ namespace Contract.Test.Tests
         {
             //Arrange
             Customer customerJonas = new Customer("2206921111", "Jonas pedersen", "1");
-            Account JonasAccount = new Account("1");
+            IAccount JonasAccount = new Account(bank, customerJonas, "1");
 
             //Act 
             double currentBalance = JonasAccount.getBalance();

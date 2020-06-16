@@ -8,3 +8,6 @@ C:\Users\Jonas\source\repos\Contract\Contract\BackendProjectBE\bin\Debug\Contrac
 C:\Users\Jonas\source\repos\Contract\Contract\BackendProjectBE\bin\Debug\Contract.pdb
 C:\Users\Jonas\source\repos\Contract\Contract\BackendProjectBE\bin\Debug\Contract.exe.config
 C:\Users\Jonas\source\repos\Contract\Contract\BackendProjectBE\obj\Debug\BackendProjectBE.csproj.CopyComplete
+C:\Users\Jonas\Documents\GitHub\Contract\Contract\BackendProjectBE\obj\Debug\BackendProjectBE.csprojAssemblyReference.cache
+C:\Users\Jonas\Documents\GitHub\Contract\Contract\BackendProjectBE\obj\Debug\BackendProjectBE.exe
+C:\Users\Jonas\Documents\GitHub\Contract\Contract\BackendProjectBE\obj\Debug\BackendProjectBE.pdb

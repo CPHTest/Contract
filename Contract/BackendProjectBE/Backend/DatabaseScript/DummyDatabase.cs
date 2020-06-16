@@ -41,22 +41,22 @@ namespace BackendProjectBE.DatabaseScript
             string superQ =
                 @"                                     
 
-                -- CREATE TABELS --
+                    -- CREATE TABELS --
 
-                   --Create Bank table
-                    CREATE TABLE [dbo].[Bank] 
-                    (
-                        [bankId] INT IDENTITY (1, 1) NOT NULL,
-                        [cvr]    NCHAR (100) NULL,
-                        [name]   NCHAR (100) NULL, 
-                        CONSTRAINT [PK_Bank] PRIMARY KEY ([bankId])
-                    );
+                       --Create Bank table
+                        CREATE TABLE [dbo].[Bank] 
+                        (
+                            [bankId] INT IDENTITY (1, 1) NOT NULL,
+                            [cvr]    NCHAR (100) NULL,
+                            [name]   NCHAR (100) NULL, 
+                            CONSTRAINT [PK_Bank] PRIMARY KEY ([bankId])
+                        );
 
-                --Create Customer table
-                   CREATE TABLE [dbo].[Customer]
-                    (
-	                    [customerId] INT IDENTITY (1, 1) NOT NULL,
-                        [cpr] NCHAR(100) NULL, 
+                    --Create Customer table
+                       CREATE TABLE [dbo].[Customer]
+                        (
+	                        [customerId] INT IDENTITY (1, 1) NOT NULL,
+                            [cpr] NCHAR(100) NULL, 
                         [name] NCHAR(100) NULL, 
                         [bankId] INT NULL, 
                         CONSTRAINT [PK_Customer] PRIMARY KEY ([customerId]),

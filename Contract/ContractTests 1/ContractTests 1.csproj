@@ -57,7 +57,6 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Test\AccountTest.cs" />
-    <Compile Include="Test\AccountTestClass.cs" />
     <Compile Include="Test\DatabaseTest.cs" />
     <Compile Include="Test\BankTest.cs" />
     <Compile Include="Test\BankIntergrationTest.cs" />

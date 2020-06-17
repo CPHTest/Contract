@@ -56,7 +56,7 @@ namespace BackendProjectBE.DatabaseScript
                        CREATE TABLE [dbo].[Customer]
                         (
 	                        [customerId] INT IDENTITY (1, 1) NOT NULL,
-                            [cpr] NCHAR(100) NULL, 
+                            [cpr] NCHAR(100) NULL, >
                         [name] NCHAR(100) NULL, 
                         [bankId] INT NULL, 
                         CONSTRAINT [PK_Customer] PRIMARY KEY ([customerId]),

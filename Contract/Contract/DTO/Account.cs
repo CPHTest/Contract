@@ -48,6 +48,11 @@ namespace Contract.DTO
             Transfer(amount, target);
         }
 
+        public IBank getBank()
+        {
+            return bank;
+        }
+
         //public void Deposit(IAccount target, long amount)
         //{
         //    target.Balance += amount;

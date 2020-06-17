@@ -9,107 +9,80 @@ using Contract.Interface;
 
 namespace Contract.Test.Tests
 {
-    [TestClass()]
-    public class BankTests
+    [TestClass]
+    public class BankIntergrationTest
     {
-        // Unit Test
+        // Fields are used by all tests.
+        private static IBank bank = new Bank("1203954", "Jyske Bank");
+        private static ICustomer customerJonas = new Customer("2206921111", "Jonas pedersen", "1");
+        private static ICustomer customerChristoffer = new Customer("2206921111", "Christoffer dunk", "2");
+
+        private static IAccount JonasAccount = new Account(bank, customerJonas, "1");
+        private static IAccount ChristofferAccount = new Account(bank, customerChristoffer, "2");
 
 
-        // Naming convention used in the project:
-        // [the name of the tested method]_[expected input / tested state]_[expected behavior].
-        // Mock objects:  Mock<Customer> customerJonas = new Mock<Customer>();
-        IBank bank = new Bank("1203954", "Jyske Bank");
-
-
-        [TestMethod]
-        public void TransferAmountBewteenAccounts_500kr_Successful()
+        //Setup will just add accounts to the bank, which is also used in all the tests
+        [TestInitialize]
+        public void setup()
         {
-
-            //Arrange
-            ICustomer customerJonas = new Customer("2206921111", "Jonas pedersen", "1");
-            ICustomer customerChristoffer = new Customer("2206921111", "Christoffer dunk", "2");
-            IAccount JonasAccount = new Account(bank, customerJonas, "1");
-            IAccount ChristofferAccount = new Account(bank, customerChristoffer, "2");
-            int TransferAmount = 500;
-            double ChristofferStatingBalance = ChristofferAccount.getBalance();
-
-            //Act 
-            JonasAccount.Transfer(TransferAmount, ChristofferAccount);
-
-            //Assert
-            Assert.AreEqual(TransferAmount + ChristofferStatingBalance, ChristofferAccount.getBalance());
+            bank.AddAccount(JonasAccount);
+            bank.AddAccount(ChristofferAccount);
         }
 
 
-        [TestMethod]
-        public void TransferAmountBewteenAccounts_500kr_Successful_Mock()
+        [TestMethod()]
+        public void test()
         {
             //Arrange
-            Customer customerJonas = new Customer("2206921111", "Jonas pedersen", "1");
-            Customer customerChristoffer = new Customer("2206921111", "Christoffer dunk", "2");
-            IAccount JonasAccount = new Account(bank, customerJonas, "1");
-            IAccount ChristofferAccount = new Account(bank, customerChristoffer, "2");
-            int TransferAmount = 500;
-            double ChristofferStatingBalance = ChristofferAccount.getBalance();
 
-            //Act 
-            JonasAccount.Transfer(TransferAmount, ChristofferAccount);
-
-            //Assert
-            Assert.AreEqual(TransferAmount + ChristofferStatingBalance, ChristofferAccount.getBalance());
-        }
-
-
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentException), "Amount is negative")]
-        public void TransferNegativeAmountBewteenAccounts_Minus500kr_ExecptionThrown()
-        {
-            //Arrange 
-            Customer customerJonas = new Customer("2206921111", "Jonas pedersen", "1");
-            Customer customerChristoffer = new Customer("2206921111", "Christoffer dunk", "2");
-            IAccount JonasAccount = new Account(bank, customerJonas, "1");
-            IAccount ChristofferAccount = new Account(bank, customerChristoffer, "2");
-
-            int TransferAmount = -500;
-            double ChristofferStatingBalance = ChristofferAccount.getBalance();
-
-            //DateTime dateTime = DateTime.Now;
-            //Movement movement = new Movement(TransferAmount, dateTime);
-
-            //Act 
-            JonasAccount.Transfer(TransferAmount, ChristofferAccount);
-
-            //Assert
-            // ExpectedException type.
-
-        }
-
-        [TestMethod]
-        public void CreateAccountWith0Balance_Successful()
-        {
-            //Arrange
-            Customer customerJonas = new Customer("2206921111", "Jonas pedersen", "1");
-            IAccount JonasAccount = new Account(bank, customerJonas, "1");
-            //int TransferAmount = 0;
 
             //Act
+            List<IAccount> accountA = bank.GetAccounts(customerJonas);
 
             //Assert
-            Assert.AreEqual(0, JonasAccount.getBalance());
+            Assert.AreEqual(8, accountA.Count);
+            // The reason why its 8 and not just the two elements, is becouse we have 4 method calling it 
+            // filling the list up with 8 elements. 
         }
 
 
-        public void CheckBalance_1000kr_Successful()
+        [TestMethod()]
+        public void GetAccountByNumber()
         {
             //Arrange
-            Customer customerJonas = new Customer("2206921111", "Jonas pedersen", "1");
-            IAccount JonasAccount = new Account(bank, customerJonas, "1");
 
-            //Act 
-            double currentBalance = JonasAccount.getBalance();
+
+            //Act
+            IAccount accountA = bank.GetAccount(JonasAccount.Number);
 
             //Assert
-            Assert.AreEqual(1000, currentBalance);
+            Assert.AreEqual(JonasAccount.Number, accountA.Number);
+        }
+
+        //UInit test example
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentException), "Account not found")]
+        public void GetAccountByNumberWrongInput()
+        {
+            //Arrange
+
+            //Act
+            bank.GetAccount("321");
+
+            // Asserting exception thrown
+        }
+        
+
+        [TestMethod()]
+        public void GetAccountByCustomer()
+        {
+            //Arrange
+
+            //Act
+            IAccount customerAccount = bank.GetAccount(customerChristoffer.getId());
+
+            //Assert
+            Assert.AreEqual(0, customerAccount.getBalance());
         }
     }
 }
